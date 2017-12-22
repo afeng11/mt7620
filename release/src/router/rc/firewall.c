@@ -4606,8 +4606,8 @@ mangle_setting2(char *lan_if, char *lan_ip, char *logaccept, char *logdrop)
 				     "-m", "hl", "--hl-eq", "254",
 				     "-j", "HL", "--hl-set", "255");
 			}
-		}
 #endif
+		}
 	}
 
 #ifdef CONFIG_BCMWL5

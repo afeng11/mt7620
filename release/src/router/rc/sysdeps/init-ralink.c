@@ -1291,9 +1291,11 @@ void reinit_hwnat(int unit)
 	if (!nvram_get_int("hwnat"))
 		return;
 #if defined(RTCONFIG_RALINK_MT7620)
+#ifdef RTCONFIG_IPV6
 	/* Temporary ipv6 workaround for 2G disconnection */
 	if (get_ipv6_service() != IPV6_DISABLED)
 		act = 0;
+#endif
 #endif
 
 	/* If QoS is enabled, disable hwnat. */
