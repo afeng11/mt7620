@@ -59,7 +59,6 @@
 #include "libsmspdu.h"
 #endif
 #else
-#ifdef RTCONFIG_MDNS
 extern int mkdir_if_none(const char *path)
 {
 	DIR *dp;
@@ -75,7 +74,6 @@ extern int mkdir_if_none(const char *path)
 
 	return 0;
 }
-#endif
 #endif	/* RTCONFIG_USB */
 
 #ifdef RTCONFIG_QTN
